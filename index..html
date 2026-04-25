@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)file:///C:/Users/ELCOT/OneDrive/Pictures/Desktop/mohana_portfolio_final.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="./mohana_portfolio_final_files/css2" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --c1: #FF6B6B; --c2: #FFD93D; --c3: #6BCB77; --c4: #4D96FF; --c5: #C77DFF;
+    --bg: #0D0D0D; --card: #1A1A1A; --card2: #222;
+    --text: #F5F5F0; --muted: #88887F;
+    --fd: 'Syne', sans-serif; --fb: 'DM Sans', sans-serif;
+  }
+  body { background: var(--bg); color: var(--text); font-family: var(--fb); font-size: 15px; line-height: 1.6; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2.5rem; background: rgba(13,13,13,0.92); backdrop-filter: blur(14px); border-bottom: 0.5px solid rgba(255,255,255,0.06); }
+  .logo { font-family: var(--fd); font-weight: 800; font-size: 1.15rem; background: linear-gradient(90deg,var(--c1),var(--c5)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+
+  /* HERO */
+  .hero-wrap { position: relative; overflow: hidden; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
+  .blob-1 { width: 500px; height: 500px; background: var(--c4); opacity: 0.08; top: -120px; right: -80px; }
+  .blob-2 { width: 320px; height: 320px; background: var(--c5); opacity: 0.07; bottom: -60px; left: 0; }
+  .blob-3 { width: 200px; height: 200px; background: var(--c1); opacity: 0.07; top: 200px; left: 40%; }
+
+  .hero { padding: 6.5rem 2.5rem 5rem; max-width: 940px; margin: 0 auto; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(107,203,119,0.08); border: 0.5px solid rgba(107,203,119,0.28); color: var(--c3); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 2rem; }
+  .hero-badge span { width: 6px; height: 6px; border-radius: 50%; background: var(--c3); animation: blink 2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+  .hero h1 { font-family: var(--fd); font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 800; line-height: 1.03; letter-spacing: -0.025em; margin-bottom: 0.3rem; }
+  .grad { background: linear-gradient(130deg, var(--c1), var(--c5) 55%, var(--c4)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero-sub { font-family: var(--fd); font-size: 1.05rem; color: var(--muted); font-weight: 400; margin-bottom: 1.6rem; letter-spacing: 0.02em; }
+
+  .hero-desc { font-size: 0.975rem; color: var(--muted); max-width: 500px; line-height: 1.85; margin-bottom: 2rem; font-weight: 300; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.2rem; }
+  .chip { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); background: var(--card); border: 0.5px solid rgba(255,255,255,0.07); padding: 6px 14px; border-radius: 100px; text-decoration: none; transition: color 0.2s, border-color 0.2s; }
+  .chip:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+
+  .btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn { padding: 0.72rem 1.7rem; border-radius: 100px; font-family: var(--fb); font-size: 13.5px; font-weight: 500; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
+  .btn-p { background: linear-gradient(135deg, var(--c1), var(--c5)); color: #fff; border: none; }
+  .btn-p:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(255,107,107,0.28); }
+  .btn-o { background: transparent; color: var(--text); border: 0.5px solid rgba(255,255,255,0.2); }
+  .btn-o:hover { border-color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.04); }
+
+  /* DIVIDER */
+  .div { width: 100%; height: 0.5px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent); }
+
+  /* SECTIONS */
+  section { padding: 5rem 2.5rem; max-width: 940px; margin: 0 auto; }
+  .slabel { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 10px; }
+  .slabel::after { content: ''; flex: 0 0 36px; height: 0.5px; background: rgba(255,255,255,0.15); }
+  .stitle { font-family: var(--fd); font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 2.5rem; line-height: 1.1; }
+
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: start; }
+  .about-text { color: var(--muted); line-height: 1.9; font-weight: 300; font-size: 0.95rem; }
+  .about-text p + p { margin-top: 0.9rem; }
+  .stats { display: flex; flex-direction: column; gap: 0.9rem; }
+  .stat { background: var(--card); border: 0.5px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1rem 1.3rem; display: flex; align-items: center; gap: 1rem; transition: border-color 0.2s; }
+  .stat:hover { border-color: rgba(255,255,255,0.14); }
+  .s-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .s-num { font-family: var(--fd); font-size: 1.35rem; font-weight: 700; }
+  .s-desc { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+
+  /* EDUCATION */
+  .edu-list { display: flex; flex-direction: column; gap: 1rem; }
+  .edu-card { background: var(--card); border: 0.5px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: border-color 0.2s; }
+  .edu-card:hover { border-color: rgba(255,255,255,0.14); }
+  .edu-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .edu-deg { font-weight: 500; font-size: 14px; margin-bottom: 3px; }
+  .edu-school { font-size: 12.5px; color: var(--muted); }
+  .edu-year { font-size: 11px; color: var(--muted); margin-top: 4px; opacity: 0.7; }
+
+  /* PROJECTS */
+  .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); gap: 1.2rem; }
+  .proj-card { background: var(--card); border: 0.5px solid rgba(255,255,255,0.06); border-radius: 20px; overflow: hidden; transition: transform 0.25s, border-color 0.25s; }
+  .proj-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.15); }
+  .proj-thumb { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; }
+  .proj-body { padding: 1.2rem; }
+  .tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 0.7rem; }
+  .tag { font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; font-weight: 500; }
+  .proj-name { font-family: var(--fd); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .proj-desc { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+
+  /* SKILLS */
+  .sk-wrap { display: flex; flex-direction: column; gap: 2rem; }
+  .sk-label { font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; }
+  .sk-chips { display: flex; flex-wrap: wrap; gap: 9px; }
+  .sk-chip { display: flex; align-items: center; gap: 7px; background: var(--card); border: 0.5px solid rgba(255,255,255,0.07); border-radius: 100px; padding: 7px 15px; font-size: 13px; transition: all 0.2s; }
+  .sk-chip:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-2px); }
+  .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+  /* CERTS */
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem; }
+  .cert { background: var(--card); border: 0.5px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.1rem 1.4rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.2s; }
+  .cert:hover { border-color: rgba(255,255,255,0.14); }
+  .cert-ic { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+  .cert-name { font-weight: 500; font-size: 13.5px; margin-bottom: 3px; }
+  .cert-by { font-size: 11.5px; color: var(--muted); }
+
+  /* FOOTER */
+  .fcta { text-align: center; padding: 5rem 2.5rem 4rem; }
+  .fcta h2 { font-family: var(--fd); font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 0.9rem; }
+  .fcta p { color: var(--muted); margin-bottom: 2rem; font-weight: 300; font-size: 0.95rem; }
+  .fbot { border-top: 0.5px solid rgba(255,255,255,0.06); padding: 1.4rem 2rem; text-align: center; font-size: 11.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Mohana A.</div>
+  <div class="nav-links">
+    <a href="file:///C:/Users/ELCOT/OneDrive/Pictures/Desktop/mohana_portfolio_final.html#about">About</a>
+    <a href="file:///C:/Users/ELCOT/OneDrive/Pictures/Desktop/mohana_portfolio_final.html#projects">Projects</a>
+    <a href="file:///C:/Users/ELCOT/OneDrive/Pictures/Desktop/mohana_portfolio_final.html#skills">Skills</a>
+    <a href="file:///C:/Users/ELCOT/OneDrive/Pictures/Desktop/mohana_portfolio_final.html#education">Education</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="hero">
+    <div class="hero-badge"><span></span>Open to opportunities</div>
+    <h1><span class="grad">Mohana A</span></h1>
+    <div class="hero-sub">Frontend Developer · Final Year CSE Student</div>
+    <p class="hero-desc">
+      Passionate about building responsive and user-friendly websites. Skilled in HTML, CSS and JavaScript, with a strong eagerness to learn and grow in a professional environment.
+    </p>
+    <div class="chips">
+      <a href="tel:9629922609" class="chip">📞 9629922609</a>
+      <a href="mailto:amohana209@gmail.com" class="chip">✉️ amohana209@gmail.com</a>
+      <a href="https://linkedin.com/in/mohana-a-mohana" target="_blank" class="chip">🔗 LinkedIn</a>
+      <a href="https://github.com/A-Mohana1110" target="_blank" class="chip">🐙 GitHub</a>
+      <span class="chip">📍 Tiruppur</span>
+    </div>
+    <div class="btns">
+      <a href="file:///C:/Users/ELCOT/OneDrive/Pictures/Desktop/mohana_portfolio_final.html#projects" class="btn btn-p">View my projects</a>
+      <a href="file:///C:/Users/ELCOT/OneDrive/Pictures/Desktop/mohana_portfolio_final.html#skills" class="btn btn-o">My skills</a>
+    </div>
+  </div>
+</div>
+
+<div class="div"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="slabel">Who I am</div>
+  <div class="stitle">Building the web,<br>one line at a time.</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a final-year Computer Science and Engineering student at Angel College of Engineering and Technology (2022–2026), with a passion for frontend development and creating intuitive user experiences.</p>
+      <p>I have a solid foundation in HTML, CSS, JavaScript and responsive design, and I'm continuously expanding my skills. I enjoy translating ideas into clean, accessible and mobile-friendly web pages.</p>
+      <p>I'm a quick learner, a good communicator, and deeply committed to continuous growth — ready to bring energy and creativity to my first professional role.</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="s-icon" style="background:rgba(255,107,107,0.12);">🎓</div>
+        <div>
+          <div class="s-num" style="color:var(--c1);">2026</div>
+          <div class="s-desc">B.E. CSE Graduating Year</div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="s-icon" style="background:rgba(77,150,255,0.12);">💻</div>
+        <div>
+          <div class="s-num" style="color:var(--c4);">3</div>
+          <div class="s-desc">Projects built</div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="s-icon" style="background:rgba(107,203,119,0.12);">📜</div>
+        <div>
+          <div class="s-num" style="color:var(--c3);">2</div>
+          <div class="s-desc">Certifications earned</div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="s-icon" style="background:rgba(199,125,255,0.12);">🌐</div>
+        <div>
+          <div class="s-num" style="color:var(--c5);">2</div>
+          <div class="s-desc">Languages spoken</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="slabel">What I've built</div>
+  <div class="stitle">Projects.</div>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="proj-thumb" style="background:linear-gradient(135deg,#0d1a10,#0a2010);">🧑‍💻</div>
+      <div class="proj-body">
+        <div class="tags">
+          <span class="tag" style="background:rgba(255,107,107,0.12);color:var(--c1);">HTML</span>
+          <span class="tag" style="background:rgba(77,150,255,0.12);color:var(--c4);">CSS</span>
+          <span class="tag" style="background:rgba(255,217,61,0.12);color:var(--c2);">JavaScript</span>
+        </div>
+        <div class="proj-name">Personal Portfolio Website</div>
+        <div class="proj-desc">A personal portfolio to showcase projects and skills. Implemented responsive design for desktop and mobile, with accessibility and UI best practices applied.</div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-thumb" style="background:linear-gradient(135deg,#1a0a20,#2a0830);">🛡️</div>
+      <div class="proj-body">
+        <div class="tags">
+          <span class="tag" style="background:rgba(255,107,107,0.12);color:var(--c1);">HTML</span>
+          <span class="tag" style="background:rgba(77,150,255,0.12);color:var(--c4);">CSS</span>
+          <span class="tag" style="background:rgba(255,217,61,0.12);color:var(--c2);">JavaScript</span>
+        </div>
+        <div class="proj-name">SaveHer App</div>
+        <div class="proj-desc">A responsive web application focused on women's safety, built with HTML, CSS and JavaScript featuring an interactive and intuitive user interface.</div>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-thumb" style="background:linear-gradient(135deg,#0a0e20,#0a1530);">🎵</div>
+      <div class="proj-body">
+        <div class="tags">
+          <span class="tag" style="background:rgba(255,107,107,0.12);color:var(--c1);">HTML</span>
+          <span class="tag" style="background:rgba(77,150,255,0.12);color:var(--c4);">CSS</span>
+          <span class="tag" style="background:rgba(255,217,61,0.12);color:var(--c2);">JavaScript</span>
+        </div>
+        <div class="proj-name">Music Player App</div>
+        <div class="proj-desc">A sleek, responsive music player with smooth playback controls and a clean interface, crafted using vanilla HTML, CSS and JavaScript.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="slabel">My toolkit</div>
+  <div class="stitle">Skills &amp; technologies.</div>
+  <div class="sk-wrap">
+
+    <div>
+      <div class="sk-label">Frontend</div>
+      <div class="sk-chips">
+        <div class="sk-chip"><span class="dot" style="background:var(--c1)"></span>HTML</div>
+        <div class="sk-chip"><span class="dot" style="background:var(--c4)"></span>CSS</div>
+        <div class="sk-chip"><span class="dot" style="background:var(--c2)"></span>JavaScript</div>
+        <div class="sk-chip"><span class="dot" style="background:var(--c3)"></span>Responsive Design</div>
+        <div class="sk-chip"><span class="dot" style="background:var(--c5)"></span>Flexbox</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sk-label">Tools</div>
+      <div class="sk-chips">
+        <div class="sk-chip"><span class="dot" style="background:var(--c1)"></span>GitHub</div>
+        <div class="sk-chip"><span class="dot" style="background:var(--c4)"></span>Canva</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sk-label">Soft Skills</div>
+      <div class="sk-chips">
+        <div class="sk-chip"><span class="dot" style="background:var(--c3)"></span>Strong Willingness to Learn</div>
+        <div class="sk-chip"><span class="dot" style="background:var(--c4)"></span>Quick Learner</div>
+        <div class="sk-chip"><span class="dot" style="background:var(--c1)"></span>Good Communication</div>
+        <div class="sk-chip"><span class="dot" style="background:var(--c2)"></span>Continuous Learning</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sk-label">Languages Known</div>
+      <div class="sk-chips">
+        <div class="sk-chip"><span class="dot" style="background:var(--c5)"></span>Tamil — Native</div>
+        <div class="sk-chip"><span class="dot" style="background:var(--c3)"></span>English — Professional</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:2.8rem;">
+    <div class="sk-label">Certifications</div>
+    <div class="cert-grid">
+      <div class="cert">
+        <div class="cert-ic" style="background:rgba(77,150,255,0.12);">🏆</div>
+        <div>
+          <div class="cert-name">Full Stack Development</div>
+          <div class="cert-by">Novitech R&amp;D Pvt. Ltd</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-ic" style="background:rgba(255,217,61,0.12);">🐍</div>
+        <div>
+          <div class="cert-name">Python Programming</div>
+          <div class="cert-by">GUVI</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="slabel">My background</div>
+  <div class="stitle">Education.</div>
+  <div class="edu-list">
+    <div class="edu-card">
+      <div class="edu-icon" style="background:rgba(77,150,255,0.12);">🎓</div>
+      <div>
+        <div class="edu-deg">B.E. Computer Science and Engineering</div>
+        <div class="edu-school">Angel College of Engineering and Technology</div>
+        <div class="edu-year">2022 – 2026</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon" style="background:rgba(107,203,119,0.12);">📗</div>
+      <div>
+        <div class="edu-deg">HSC</div>
+        <div class="edu-school">PVKN Higher Secondary School, Pongalur</div>
+        <div class="edu-year">2021 – 2022</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon" style="background:rgba(255,217,61,0.12);">📘</div>
+      <div>
+        <div class="edu-deg">SSLC</div>
+        <div class="edu-school">Government High School, Kattur</div>
+        <div class="edu-year">2019 – 2020</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- FOOTER -->
+<div class="fcta">
+  <h2>Let's connect and <span style="background:linear-gradient(135deg,var(--c3),var(--c4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">build together.</span></h2>
+  <p>Open to entry-level frontend roles, internships and exciting web projects.</p>
+  <a href="mailto:amohana209@gmail.com" class="btn btn-p">Say hello →</a>
+</div>
+<div class="fbot">Mohana A · Frontend Developer · Tiruppur · github.com/A-Mohana1110</div>
+
+
+
+</body></html>
